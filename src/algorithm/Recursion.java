@@ -1,4 +1,4 @@
-package Algorism;
+package algorithm;
 
 public class Recursion {
 
