@@ -17,7 +17,7 @@ package algorithm.greedy.asp;
  *  4 if m <= n
  *  5 	return {am} and RECURSIVE-ACTIVITY-SELECTOR(s,f,k,n)
  *  6 else return 0;
- *  
+ *  /////////////////////////////////
  *  GREEDY-ACTIVITY-SELECTOR(s,f) 
  *  1 n = s.length
  *  2 A = {a1}

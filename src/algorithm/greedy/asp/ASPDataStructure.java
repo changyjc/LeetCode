@@ -15,7 +15,8 @@ public class ASPDataStructure {
 	public int activityStartTime;
 	public int activityEndTime;
 	public int activityWeight;
-	public String isActivityLong = null;
+	public String isActivityLong = 
+			profitArray = new int[lastIndex+2][maxSmallActivnull;
 	public boolean shouldActivityBeUsed = false;
 	public int smallCompatibleCount = 0;
 	
