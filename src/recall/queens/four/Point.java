@@ -7,6 +7,7 @@ public class Point {
 	private int c;
 	private int r;
 	private final int EIGHT = 8;
+	Set<Point> ForbidenP = new HashSet<Point>();
 	
 	public Point(int c, int r){
 		this.c = c;
@@ -14,7 +15,6 @@ public class Point {
 	}
 
 	public Set<Point> getForbidenP() {
-		Set<Point> ForbidenP = new HashSet<Point>();
 		Point p = new Point(c,r);
 		//横向禁入点
 		for(int i=1; i<=EIGHT; i++){
@@ -22,7 +22,7 @@ public class Point {
 			ForbidenP.add(p_C);
 		}
 		
-		//横向禁入点
+		//纵向禁入点
 		for(int j=1; j<=EIGHT; j++){
 			Point p_R = new Point(j,r);
 			if(!p_R.equals(p)){
@@ -35,24 +35,31 @@ public class Point {
 			if(c+n <= EIGHT && r+n <= EIGHT){
 				ForbidenP.add(new Point(c+n,r+n));
 			}
-			/*
-			if(c-n > 0 && c-n > 0){
+			
+			if(c-n > 0 && r-n > 0){
 				ForbidenP.add(new Point(c-n,r-n));
 			}
 			
-			if(c-n > 0 && c+n <= EIGHT){
+			if(c-n > 0 && r+n <= EIGHT){
 				ForbidenP.add(new Point(c-n,r+n));
 			}
 			
-			if(c+n <= EIGHT && c-n > 0){
+			if(c+n <= EIGHT && r-n > 0){
 				ForbidenP.add(new Point(c+n,r-n));
 			}
-			*/
+			
 		}
 	
 		return ForbidenP;
 	}			
-	
+
+	public boolean equals(Point p){
+		if(this.c == p.c && this.r == p.r){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	public int getC(){
 		return c;
 	}

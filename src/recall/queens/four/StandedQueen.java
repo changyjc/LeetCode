@@ -1,10 +1,10 @@
 package recall.queens.four;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class StandedQueen {
-	private Point p = null;
-	private Set<Point> standedQueen = null;
+	private Set<Point> standedQueen = new HashSet<Point>();
 	
 	public void add(Point p){
 		standedQueen.add(p);
