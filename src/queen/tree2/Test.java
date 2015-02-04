@@ -10,7 +10,7 @@ public class Test {
 	/**
 	 * @param args
 	 */
-	public static final int SIZE = 4;
+	public static final int SIZE = 8;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		TreeNode root = new TreeNode(0);
@@ -19,10 +19,10 @@ public class Test {
 			for(int j=1; j<=SIZE; j++){
 				int point;
 				point = i*10 + j;
-//				System.out.print(point);
+				System.out.print(point);
 				root.addChildNode(new TreeNode(point));
 			}
-//			System.out.println();
+			System.out.println();
 		}
 		System.out.println(root.getChildList().get(15).getNodeName());
 		TreeNode No15 = root.getChildList().get(15);

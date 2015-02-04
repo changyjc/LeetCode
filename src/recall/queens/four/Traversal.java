@@ -15,10 +15,11 @@ public class Traversal {
 		int i;
 		int j;
 		StandedQueen standedQueen = new StandedQueen();
+
 		
-//		for(i=1; i<=EIGHT; i++){
-//			for(j=1; j<=EIGHT; j++){
-				Point point = new Point(1,1);
+		for(i=1; i<=EIGHT; i++){
+			for(j=1; j<=EIGHT; j++){
+				Point point = new Point(i,j);
 				standedQueen.add(point);
 				SurvivalPoint survivalPoint = new SurvivalPoint();
 				
@@ -34,8 +35,10 @@ public class Traversal {
 				
 				
 
-//			}
-//		}
+			}
+		}
+		
+
 	}
 	
 	public static Point nextPoint(SurvivalPoint survivalPoint){
