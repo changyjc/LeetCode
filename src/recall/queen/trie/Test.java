@@ -1,5 +1,7 @@
 package recall.queen.trie;
 
+import java.util.Iterator;
+
 
 public class Test {
 
@@ -19,9 +21,13 @@ public class Test {
 				root.add(new TreeNode(point));
 			}
 		}
-		root.print();	
-		
+//		root.print();
+//		for(int i = 1; i<= 9; i++){
+			int i = 1;
+			root.solve(i);
+			System.out.println("第" + i + "层解的个数：" + root.no7);
+//		}
+
 	}
-	
 
 }

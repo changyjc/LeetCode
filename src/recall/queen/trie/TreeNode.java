@@ -19,7 +19,7 @@ public class TreeNode {
     	private int layer;
     	private int value;
     	private TreeNode parentNode;
-    	private List<TreeNode> childList;
+    	List<TreeNode> childList;
     
     	public TreeNode(int value){
     		childList = new ArrayList<TreeNode>();
@@ -214,28 +214,26 @@ public class TreeNode {
 		 * 前序遍历，查找解
 		 *
 		 */
-		public void solve() {
+		
+		public static int no7 = 0;
+		public void solve(int n) {
 			//第8层，返回路径
-
-			if(layer == 8) {
-				System.out.print(value);
-				TreeNode parent = parentNode;
-
-				while(parent != null) {
-					parent = parent.parentNode;
-					
-					System.out.print(value);
-				}
+			if(layer == n && childList != null) {
+				no7++;
 			}
 
 			//不是第8层，递归
 			Iterator<TreeNode> iterator = this.getChildList().iterator();
 			while(iterator.hasNext()){
 				TreeNode next = iterator.next();
-				next.solve();
+				next.solve(n);
 			}
 		}
 		
+
+		
+		
+
 	    /**
 	     * set.get方法
 	     * @return
